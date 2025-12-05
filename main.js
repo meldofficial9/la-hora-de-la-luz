@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.getAttribute("data-page");
   if (!page) return;
 
+  if (page === "gocuba") {
+    // special: load stories and news for GoCuba
+    loadList("content/testimonios-gocuba.json", "gocuba-stories", "testimonial", 3);
+    loadList("content/noticias-gocuba.json", "gocuba-news", "news", 3);
+    return;
+  }
+
   const map = {
     "eventos": { file: "content/eventos.json", containerId: "eventos-list", type: "event" },
     "testimonios": { file: "content/testimonios.json", containerId: "testimonios-list", type: "testimonial" },
@@ -38,21 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
     "gocuba-eventos": { file: "content/eventos-gocuba.json", containerId: "gocuba-eventos-list", type: "event" },
     "gocuba-testimonios": { file: "content/testimonios-gocuba.json", containerId: "gocuba-testimonios-list", type: "testimonial" },
     "gocuba-noticias": { file: "content/noticias-gocuba.json", containerId: "gocuba-noticias-list", type: "news" },
-    "home": { file: "content/testimonios.json", containerId: "home-testimonios", type: "testimonial", limit: 3 },
-    "gocuba": { file: "content/testimonios-gocuba.json", containerId: null, type: null }
+    "home": { file: "content/testimonios.json", containerId: "home-testimonios", type: "testimonial", limit: 3 }
   };
 
   const cfg = map[page];
   if (!cfg || !cfg.file || !cfg.containerId) return;
 
-  const container = document.getElementById(cfg.containerId);
+  loadList(cfg.file, cfg.containerId, cfg.type, cfg.limit);
+});
+
+function loadList(file, containerId, type, limit) {
+  const container = document.getElementById(containerId);
   if (!container) return;
 
-  fetch(cfg.file)
+  fetch(file)
     .then((res) => res.json())
     .then((data) => {
       const items = (data && data.items) || [];
-      const slice = typeof cfg.limit === "number" ? items.slice(0, cfg.limit) : items;
+      const slice = typeof limit === "number" ? items.slice(0, limit) : items;
 
       if (!slice.length) {
         container.innerHTML = "<p class='section-intro'>Pronto compartiremos contenido en esta sección.</p>";
@@ -60,15 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const fragments = slice.map((item) => {
-        if (cfg.type === "event") {
+        if (type === "event") {
           return renderEvent(item);
-        } else if (cfg.type === "testimonial") {
+        } else if (type === "testimonial") {
           return renderTestimonial(item);
-        } else if (cfg.type === "news") {
+        } else if (type === "news") {
           return renderNews(item);
-        } else if (cfg.type === "reflection") {
+        } else if (type === "reflection") {
           return renderReflection(item);
-        } else if (cfg.type === "resource") {
+        } else if (type === "resource") {
           return renderResource(item);
         }
         return "";
@@ -81,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML =
         "<p class='section-intro'>No fue posible cargar el contenido en este momento.</p>";
     });
-});
+}
 
 function esc(value) {
   if (value == null) return "";
@@ -103,7 +113,7 @@ function renderEvent(item) {
     <article class="card">
       ${tag ? `<div class="card-tag">${tag}</div>` : ""}
       <div class="card-title">${titulo}</div>
-      <div class="card-meta">${fecha}${lugar ? " · " + lugar : ""}</div>
+      <div class="card-meta">${fecha || ""}${lugar ? " · " + lugar : ""}</div>
       <p>${descripcion}</p>
     </article>
   `;
