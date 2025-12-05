@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La hora de la Luz</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body>
+<body data-page="home">
   <!-- NAVBAR -->
   <header class="site-header">
     <div class="container nav-container">
@@ -28,6 +29,10 @@
       <nav class="nav-menu">
         <a href="#inicio">Inicio</a>
         <a href="gocuba.html">GoCuba</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="recursos.html">Recursos</a>
         <a href="#cada-hogar">Cada Hogar</a>
         <a href="#donar">Donar</a>
         <a href="#contacto">Contacto</a>
@@ -101,7 +106,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN: HISTORIAS / TESTIMONIOS -->
+    <!-- SECCIÓN: HISTORIAS / TESTIMONIOS DESTACADOS -->
     <section class="section alt" id="historias">
       <div class="container">
         <h2>Historias de luz</h2>
@@ -109,33 +114,14 @@
           Cada historia representa un hogar alcanzado, una vida transformada.
         </p>
 
-        <div class="stories-grid">
-          <article class="story">
-            <h3>Una vela en la oscuridad</h3>
-            <p>
-              En un pequeño pueblo de Cuba, una familia recibió una visita durante
-              La hora de la Luz. Ese día, además de una ayuda en alimentos,
-              escucharon por primera vez que Dios no se había olvidado de ellos.
-            </p>
-          </article>
+        <div id="home-testimonios" class="stories-grid">
+          <!-- Se llenará dinámicamente con algunos testimonios -->
+        </div>
 
-          <article class="story">
-            <h3>Una iglesia movilizada</h3>
-            <p>
-              Más de 20 voluntarios de una iglesia local se organizaron para visitar
-              casas, orar y compartir su fe. Ellos mismos dicen que “nunca habíamos
-              visto tanto hambre por escuchar de Jesús”.
-            </p>
-          </article>
-
-          <article class="story">
-            <h3>De espectador a enviado</h3>
-            <p>
-              Un joven que solo asistía a la iglesia decidió participar en GoCuba.
-              Ahora lidera un pequeño grupo y está comprometido con llevar la luz a
-              nuevas comunidades.
-            </p>
-          </article>
+        <div class="cta-center">
+          <a href="testimonios.html" class="btn secondary">
+            Ver más testimonios
+          </a>
         </div>
       </div>
     </section>
@@ -278,6 +264,11 @@
 
         <div class="donate-box">
           <h3>Donación única o especial</h3>
+          <p class="form-note">
+            Muy pronto podrás donar directamente desde esta página. Mientras tanto,
+            completa el formulario para que podamos contactarte con las opciones
+            de donación más seguras.
+          </p>
           <form
             class="donate-form"
             name="donar-unica"
@@ -321,11 +312,6 @@
               required
             />
 
-            <p class="form-note">
-              Después de enviar este formulario, te contactaremos con las
-              instrucciones para completar tu donación de forma segura.
-            </p>
-
             <button type="submit" class="btn primary full">
               Enviar mi intención de donación
             </button>
@@ -344,6 +330,7 @@
             iglesia u organización? Escríbenos.
           </p>
           <ul class="bullet-list">
+            <li>Correo: contacto@lahoradelaluz.org (ejemplo, puedes editarlo luego).</li>
             <li>Invita a tu iglesia a ser parte de GoCuba.</li>
             <li>Solicita recursos para evangelismo y discipulado.</li>
             <li>Recibe noticias y testimonios por correo electrónico.</li>
@@ -438,8 +425,10 @@
       </div>
       <div class="footer-links">
         <a href="gocuba.html">GoCuba</a>
-        <a href="#cada-hogar">Cada Hogar</a>
-        <a href="#donar">Donar</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="recursos.html">Recursos</a>
         <a href="#contacto">Contacto</a>
       </div>
       <div class="footer-meta">
