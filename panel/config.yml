@@ -1,0 +1,157 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+locale: "es"
+
+collections:
+  - name: "paginas"
+    label: "Páginas estáticas"
+    files:
+      - file: "index.html"
+        label: "Página principal"
+        name: "inicio"
+        editor:
+          preview: false
+        fields:
+          - { label: "Contenido HTML", name: "body", widget: "code", default: "", hint: "Edición avanzada del HTML. Usar solo para cambios de texto sencillos." }
+      - file: "gocuba.html"
+        label: "Página GoCuba"
+        name: "gocuba"
+        editor:
+          preview: false
+        fields:
+          - { label: "Contenido HTML", name: "body", widget: "code", default: "", hint: "Edición avanzada del HTML. Usar solo para cambios de texto sencillos." }
+
+  - name: "eventos"
+    label: "Eventos generales"
+    files:
+      - file: "content/eventos.json"
+        label: "Lista de eventos"
+        name: "eventos"
+        fields:
+          - label: "Eventos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string" }
+              - { label: "Lugar", name: "lugar", widget: "string", required: false }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Etiqueta", name: "tag", widget: "string", required: false }
+
+  - name: "eventos_gocuba"
+    label: "Eventos GoCuba"
+    files:
+      - file: "content/eventos-gocuba.json"
+        label: "Lista de eventos GoCuba"
+        name: "eventos_gocuba"
+        fields:
+          - label: "Eventos GoCuba"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string" }
+              - { label: "Lugar", name: "lugar", widget: "string", required: false }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Etiqueta", name: "tag", widget: "string", required: false }
+
+  - name: "testimonios"
+    label: "Testimonios"
+    files:
+      - file: "content/testimonios.json"
+        label: "Lista de testimonios"
+        name: "testimonios"
+        fields:
+          - label: "Testimonios"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Lugar", name: "lugar", widget: "string", required: false }
+              - { label: "Resumen corto", name: "resumen", widget: "string", required: false }
+              - { label: "Testimonio", name: "cuerpo", widget: "text" }
+
+  - name: "testimonios_gocuba"
+    label: "Testimonios GoCuba"
+    files:
+      - file: "content/testimonios-gocuba.json"
+        label: "Lista de testimonios GoCuba"
+        name: "testimonios_gocuba"
+        fields:
+          - label: "Testimonios GoCuba"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Lugar", name: "lugar", widget: "string", required: false }
+              - { label: "Resumen corto", name: "resumen", widget: "string", required: false }
+              - { label: "Testimonio", name: "cuerpo", widget: "text" }
+
+  - name: "noticias"
+    label: "Noticias"
+    files:
+      - file: "content/noticias.json"
+        label: "Lista de noticias"
+        name: "noticias"
+        fields:
+          - label: "Noticias"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string", required: false }
+              - { label: "Resumen", name: "resumen", widget: "text" }
+              - { label: "Enlace (opcional)", name: "link", widget: "string", required: false }
+
+  - name: "noticias_gocuba"
+    label: "Noticias GoCuba"
+    files:
+      - file: "content/noticias-gocuba.json"
+        label: "Lista de noticias GoCuba"
+        name: "noticias_gocuba"
+        fields:
+          - label: "Noticias GoCuba"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string", required: false }
+              - { label: "Resumen", name: "resumen", widget: "text" }
+              - { label: "Enlace (opcional)", name: "link", widget: "string", required: false }
+
+  - name: "reflexiones"
+    label: "Reflexiones y devocionales"
+    files:
+      - file: "content/reflexiones.json"
+        label: "Lista de reflexiones"
+        name: "reflexiones"
+        fields:
+          - label: "Reflexiones"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string", required: false }
+              - { label: "Pasaje bíblico (opcional)", name: "pasaje", widget: "string", required: false }
+              - { label: "Contenido", name: "cuerpo", widget: "text" }
+
+  - name: "recursos"
+    label: "Recursos y descargables"
+    files:
+      - file: "content/recursos.json"
+        label: "Lista de recursos"
+        name: "recursos"
+        fields:
+          - label: "Recursos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Tipo", name: "tipo", widget: "string", required: false }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Enlace o URL", name: "link", widget: "string", required: false }
