@@ -8,24 +8,6 @@ public_folder: "/img/uploads"
 locale: "es"
 
 collections:
-  - name: "paginas"
-    label: "Páginas estáticas"
-    files:
-      - file: "index.html"
-        label: "Página principal"
-        name: "inicio"
-        editor:
-          preview: false
-        fields:
-          - { label: "Contenido HTML", name: "body", widget: "code", default: "", hint: "Edición avanzada del HTML. Usar solo para cambios de texto sencillos." }
-      - file: "gocuba.html"
-        label: "Página GoCuba"
-        name: "gocuba"
-        editor:
-          preview: false
-        fields:
-          - { label: "Contenido HTML", name: "body", widget: "code", default: "", hint: "Edición avanzada del HTML. Usar solo para cambios de texto sencillos." }
-
   - name: "eventos"
     label: "Eventos generales"
     files:
