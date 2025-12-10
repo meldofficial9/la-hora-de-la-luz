@@ -2,441 +2,354 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La hora de la Luz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body data-page="home">
-  <!-- NAVBAR -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <div class="brand-logos">
-          <img src="img/lighthouse-logo.png" alt="La hora de la Luz Faro" class="brand-logo small-logo" />
-          <img src="img/everyhome-logo.png" alt="EveryHome Logo" class="brand-logo" />
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">La hora de la Luz</span>
-          <span class="brand-subtitle">Llevando esperanza a cada hogar</span>
-        </div>
-      </a>
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logos">
+        <img src="img/lighthouse-logo.png" alt="La hora de la Luz" class="brand-logo small-logo" />
+        <img src="img/everyhome-logo.png" alt="EveryHome" class="brand-logo" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">La hora de la Luz</span>
+        <span class="brand-subtitle">Llevando esperanza a cada hogar</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu">
+      <a href="#inicio">Inicio</a>
+      <a href="gocuba.html">GoCuba</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="#cada-hogar">Cada Hogar</a>
+      <a href="#donar">Donar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-      <button class="nav-toggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-menu">
-        <a href="#inicio">Inicio</a>
-        <a href="gocuba.html">GoCuba</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="testimonios.html">Testimonios</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="#cada-hogar">Cada Hogar</a>
-        <a href="#donar">Donar</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Movimiento · EveryHome</p>
+        <h1>Es la hora de la luz para Cuba y para el mundo.</h1>
+        <p>
+          La hora de la Luz es un movimiento para llevar el mensaje de esperanza
+          a cada familia, apoyando a obreros y proyectos locales a través de GoCuba
+          y el programa de donaciones recurrentes Cada Hogar.
+        </p>
+        <div class="hero-actions">
+          <a href="gocuba.html" class="btn primary">Conocer GoCuba</a>
+          <a href="#donar" class="btn secondary">Quiero Donar</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-badge">
+          <img src="img/lighthouse-logo.png" alt="Faro La hora de la Luz" />
+        </div>
+        <p class="hero-caption">
+          Un faro de esperanza en medio de la necesidad espiritual y material.
+        </p>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <!-- HERO -->
-  <main id="inicio">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Es la hora de la luz para Cuba y para el mundo.</h1>
+  <section class="section" id="movimiento">
+    <div class="container">
+      <h2>¿Cómo avanzamos la misión?</h2>
+      <p class="section-intro">
+        Trabajamos en colaboración con iglesias, líderes y seguidores de Jesús para
+        que el mensaje llegue a todos. Tres pilares sostienen el movimiento:
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>La hora de la Luz</h3>
           <p>
-            La hora de la Luz es un movimiento para llevar el mensaje de esperanza
-            a cada familia, apoyando a obreros y proyectos locales a través de GoCuba
-            y el programa de donaciones recurrentes Cada Hogar.
+            Momentos especiales en el año donde unimos oración, evangelismo y acción
+            social para compartir la luz de Jesús en comunidades completas.
           </p>
-          <div class="hero-actions">
-            <a href="gocuba.html" class="btn primary">Conocer GoCuba</a>
-            <a href="#donar" class="btn secondary">Quiero Donar</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-logo-badge">
-            <img src="img/lighthouse-logo.png" alt="La hora de la Luz – Faro" />
-          </div>
-          <p class="hero-caption">
-            Un faro de esperanza en medio de la necesidad espiritual y material.
-          </p>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <!-- SECCIÓN: CÓMO NOS MOVEMOS -->
-    <section class="section" id="movimiento">
-      <div class="container">
-        <h2>¿Cómo avanzamos la misión?</h2>
-        <p class="section-intro">
-          Trabajamos en colaboración con iglesias, líderes y seguidores de Jesús para
-          que el mensaje llegue a todos. Tres pilares sostienen el movimiento:
-        </p>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>La hora de la Luz</h3>
-            <p>
-              Momentos especiales en el año donde unimos oración, evangelismo y acción
-              social para compartir la luz de Jesús en comunidades completas.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>GoCuba</h3>
-            <p>
-              Una iniciativa focalizada en Cuba: entrenar, enviar y apoyar obreros locales
-              para que cada barrio reciba el mensaje de esperanza.
-            </p>
-            <a href="gocuba.html" class="card-link">Ver detalles de GoCuba →</a>
-          </article>
-
-          <article class="card">
-            <h3>Cada Hogar</h3>
-            <p>
-              Programa de donaciones y suscripciones mensuales que garantiza apoyo
-              constante para familias, líderes y proyectos en el campo misionero.
-            </p>
-            <a href="#cada-hogar" class="card-link">Explorar Cada Hogar →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN: HISTORIAS / TESTIMONIOS DESTACADOS -->
-    <section class="section alt" id="historias">
-      <div class="container">
-        <h2>Historias de luz</h2>
-        <p class="section-intro">
-          Cada historia representa un hogar alcanzado, una vida transformada.
-        </p>
-
-        <div id="home-testimonios" class="stories-grid">
-          <!-- Se llenará dinámicamente con algunos testimonios -->
-        </div>
-
-        <div class="cta-center">
-          <a href="testimonios.html" class="btn secondary">
-            Ver más testimonios
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN: CADA HOGAR -->
-    <section class="section" id="cada-hogar">
-      <div class="container">
-        <div class="section-header-flex">
-          <div>
-            <h2>Cada Hogar</h2>
-            <p class="section-intro">
-              Cada Hogar es la familia de amigos y socios de EveryHome que han decidido
-              sostener la misión con una ofrenda mensual. Tu aporte crea una historia
-              de luz en hogares reales.
-            </p>
-          </div>
-          <div class="badge">Socios EveryHome</div>
-        </div>
-
-        <div class="plan-grid">
-          <article class="plan-card">
-            <h3>Semilla</h3>
-            <p class="plan-amount">US$10 / mes</p>
-            <p class="plan-text">
-              Ayuda a cubrir materiales, literatura y recursos básicos para visitas
-              casa por casa.
-            </p>
-          </article>
-
-          <article class="plan-card plan-featured">
-            <h3>Faro</h3>
-            <p class="plan-amount">US$25 / mes</p>
-            <p class="plan-text">
-              Sostiene a obreros locales, transporte y apoyo logístico para llegar a
-              comunidades más alejadas.
-            </p>
-          </article>
-
-          <article class="plan-card">
-            <h3>Multiplicador</h3>
-            <p class="plan-amount">US$50+ / mes</p>
-            <p class="plan-text">
-              Invierte en entrenar líderes, desarrollar nuevos recursos y expandir la
-              misión a nuevas regiones.
-            </p>
-          </article>
-        </div>
-
-        <div class="cada-hogar-personal">
-          <h3>Hazte parte de Cada Hogar</h3>
+        <article class="card">
+          <h3>GoCuba</h3>
           <p>
-            Como suscriptor Cada Hogar recibirás noticias, testimonios y reportes del impacto
-            que estás generando, además de fechas clave de oración y movilización.
+            Una iniciativa focalizada en Cuba: entrenar, enviar y apoyar obreros locales
+            para que cada barrio reciba el mensaje de esperanza.
           </p>
-        </div>
+          <a href="gocuba.html" class="card-link">Ver detalles de GoCuba →</a>
+        </article>
 
-        <div class="cada-hogar-grid">
-          <form
-            class="contact-form cada-hogar-form"
-            name="cada-hogar-suscripcion"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="cada-hogar-suscripcion" />
-
-            <label for="ch-name">Nombre completo</label>
-            <input
-              id="ch-name"
-              name="nombre"
-              type="text"
-              placeholder="Tu nombre"
-              required
-            />
-
-            <label for="ch-email">Correo electrónico</label>
-            <input
-              id="ch-email"
-              name="email"
-              type="email"
-              placeholder="tucorreo@example.com"
-              required
-            />
-
-            <label for="ch-amount">Monto mensual (USD)</label>
-            <input
-              id="ch-amount"
-              name="monto"
-              type="number"
-              min="5"
-              step="1"
-              placeholder="Ej: 25"
-              required
-            />
-
-            <label for="ch-message">¿Por qué quieres ser parte de Cada Hogar? (opcional)</label>
-            <textarea
-              id="ch-message"
-              name="mensaje"
-              rows="3"
-              placeholder="Comparte brevemente tu motivo o carga por la obra"
-            ></textarea>
-
-            <label class="checkbox-inline">
-              <input type="checkbox" name="boletin" value="si" checked />
-              Quiero recibir noticias y fechas de eventos de EveryHome / La hora de la Luz.
-            </label>
-
-            <button type="submit" class="btn primary full">
-              Quiero ser parte de Cada Hogar
-            </button>
-          </form>
-
-          <div class="cada-hogar-note">
-            <p>
-              Esta información nos ayuda a conocerte y a acompañarte mejor. Una vez que envíes
-              el formulario, recibirás un correo con las opciones seguras para configurar tu
-              donación recurrente.
-            </p>
-          </div>
-        </div>
+        <article class="card">
+          <h3>Cada Hogar</h3>
+          <p>
+            Programa de donaciones y suscripciones mensuales que garantiza apoyo
+            constante para familias, líderes y proyectos en el campo misionero.
+          </p>
+          <a href="#cada-hogar" class="card-link">Explorar Cada Hogar →</a>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECCIÓN: DONAR -->
-    <section class="section alt" id="donar">
-      <div class="container donate-grid">
-        <div>
-          <h2>Haz tu donación hoy</h2>
-          <p class="section-intro">
-            Tu generosidad permite que la luz de Jesús llegue a lugares donde
-            la oscuridad parece tener la última palabra. Una sola ofrenda puede
-            marcar la diferencia para una familia completa.
-          </p>
-          <ul class="bullet-list">
-            <li>Apoya proyectos locales en Cuba y otros lugares.</li>
-            <li>Fortalece a obreros y familias que sirven en el campo.</li>
-            <li>Impulsa nuevas iniciativas de evangelismo y ayuda social.</li>
-          </ul>
-        </div>
-
-        <div class="donate-box">
-          <h3>Donación única o especial</h3>
-          <p class="form-note">
-            Muy pronto podrás donar directamente desde esta página. Mientras tanto,
-            completa el formulario para que podamos contactarte con las opciones
-            de donación más seguras.
-          </p>
-          <form
-            class="donate-form"
-            name="donar-unica"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="donar-unica" />
-            <label for="donation-type">Destino de la donación</label>
-            <select id="donation-type" name="destino">
-              <option value="general">La hora de la Luz (general)</option>
-              <option value="gocuba">GoCuba</option>
-              <option value="cada-hogar">Cada Hogar / EveryHome</option>
-            </select>
-
-            <label for="amount">Monto (USD)</label>
-            <input
-              id="amount"
-              name="monto"
-              type="number"
-              min="5"
-              step="1"
-              placeholder="Ej: 50"
-              required
-            />
-
-            <label for="name">Nombre</label>
-            <input
-              id="name"
-              name="nombre"
-              type="text"
-              placeholder="Tu nombre completo"
-              required
-            />
-
-            <label for="email">Correo electrónico</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="tucorreo@example.com"
-              required
-            />
-
-            <button type="submit" class="btn primary full">
-              Enviar mi intención de donación
-            </button>
-          </form>
-        </div>
+  <section class="section alt" id="historias">
+    <div class="container">
+      <h2>Historias de luz</h2>
+      <p class="section-intro">
+        Cada historia representa un hogar alcanzado, una vida transformada.
+      </p>
+      <div id="home-testimonios" class="stories-grid"></div>
+      <div class="cta-center">
+        <a href="testimonios.html" class="btn secondary">Ver más testimonios</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECCIÓN: CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="container contact-grid">
+  <section class="section" id="cada-hogar">
+    <div class="container">
+      <div class="section-header-flex">
         <div>
-          <h2>Conectemos</h2>
+          <h2>Cada Hogar</h2>
           <p class="section-intro">
-            ¿Quieres saber más, recibir materiales o invitar La hora de la Luz a tu
-            iglesia u organización? Escríbenos.
+            Cada Hogar es la familia de amigos y socios de EveryHome que han decidido
+            sostener la misión con una ofrenda mensual. Tu aporte crea una historia
+            de luz en hogares reales.
           </p>
-          <ul class="bullet-list">
-            <li>Correo: contacto@lahoradelaluz.org (ejemplo, puedes editarlo luego).</li>
-            <li>Invita a tu iglesia a ser parte de GoCuba.</li>
-            <li>Solicita recursos para evangelismo y discipulado.</li>
-            <li>Recibe noticias y testimonios por correo electrónico.</li>
-          </ul>
         </div>
-
-        <div class="contact-box">
-          <h3>Déjanos tus datos</h3>
-          <form
-            class="contact-form"
-            name="contacto-general"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contacto-general" />
-
-            <label for="contact-name">Nombre</label>
-            <input
-              id="contact-name"
-              name="nombre"
-              type="text"
-              placeholder="Tu nombre"
-              required
-            />
-
-            <label for="contact-email">Correo</label>
-            <input
-              id="contact-email"
-              name="email"
-              type="email"
-              placeholder="tucorreo@example.com"
-              required
-            />
-
-            <label for="contact-message">Mensaje</label>
-            <textarea
-              id="contact-message"
-              name="mensaje"
-              rows="4"
-              placeholder="Cuéntanos en qué te podemos ayudar"
-              required
-            ></textarea>
-
-            <button type="submit" class="btn secondary full">
-              Enviar mensaje
-            </button>
-          </form>
-        </div>
+        <div class="badge">Socios EveryHome</div>
       </div>
-    </section>
 
-    <!-- NEWSLETTER -->
-    <section class="section newsletter">
-      <div class="container newsletter-grid">
-        <div>
-          <h2>Mantente al tanto</h2>
-          <p class="section-intro">
-            Suscríbete para recibir noticias, historias y fechas de eventos de
-            La hora de la Luz, GoCuba y EveryHome.
+      <div class="plan-grid">
+        <article class="plan-card">
+          <h3>Semilla</h3>
+          <p class="plan-amount">US$10 / mes</p>
+          <p class="plan-text">
+            Ayuda a cubrir materiales, literatura y recursos básicos para visitas
+            casa por casa.
           </p>
-        </div>
+        </article>
+
+        <article class="plan-card plan-featured">
+          <h3>Faro</h3>
+          <p class="plan-amount">US$25 / mes</p>
+          <p class="plan-text">
+            Sostiene a obreros locales, transporte y apoyo logístico para llegar a
+            comunidades más alejadas.
+          </p>
+        </article>
+
+        <article class="plan-card">
+          <h3>Multiplicador</h3>
+          <p class="plan-amount">US$50+ / mes</p>
+          <p class="plan-text">
+            Invierte en entrenar líderes, desarrollar nuevos recursos y expandir la
+            misión a nuevas regiones.
+          </p>
+        </article>
+      </div>
+
+      <div class="cada-hogar-personal">
+        <h3>Hazte parte de Cada Hogar</h3>
+        <p>
+          Como suscriptor Cada Hogar recibirás noticias, testimonios y reportes del impacto
+          que estás generando, además de fechas clave de oración y movilización.
+        </p>
+      </div>
+
+      <div class="cada-hogar-grid">
         <form
-          class="newsletter-form"
-          name="boletin-hora-de-la-luz"
+          class="contact-form cada-hogar-form"
+          name="cada-hogar-suscripcion"
           method="POST"
           data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="boletin-hora-de-la-luz" />
-          <input
-            type="email"
-            name="email"
-            placeholder="tu@email.com"
-            required
-          />
-          <button type="submit" class="btn primary">Suscribirme</button>
-        </form>
-      </div>
-    </section>
-  </main>
+          <input type="hidden" name="form-name" value="cada-hogar-suscripcion" />
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="img/everyhome-logo.png" alt="EveryHome" />
-          <span>La hora de la Luz</span>
+          <label for="ch-name">Nombre completo</label>
+          <input id="ch-name" name="nombre" type="text" required />
+
+          <label for="ch-email">Correo electrónico</label>
+          <input id="ch-email" name="email" type="email" required />
+
+          <label for="ch-amount">Monto mensual (USD)</label>
+          <input id="ch-amount" name="monto" type="number" min="5" step="1" required />
+
+          <label for="ch-message">¿Por qué quieres ser parte de Cada Hogar? (opcional)</label>
+          <textarea id="ch-message" name="mensaje" rows="3"></textarea>
+
+          <label class="checkbox-inline">
+            <input type="checkbox" name="boletin" value="si" checked />
+            Quiero recibir noticias y fechas de eventos.
+          </label>
+
+          <button type="submit" class="btn primary full">
+            Quiero ser parte de Cada Hogar
+          </button>
+        </form>
+
+        <div class="cada-hogar-note">
+          <p>
+            Esta información nos ayuda a conocerte y a acompañarte mejor. Una vez que envíes
+            el formulario, recibirás un correo con las opciones seguras para configurar tu
+            donación recurrente.
+          </p>
         </div>
-        <p class="footer-text">
-          Juntos podemos llevar la luz de Jesús a cada hogar.
-        </p>
-      </div>
-      <div class="footer-links">
-        <a href="gocuba.html">GoCuba</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="testimonios.html">Testimonios</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-      <div class="footer-meta">
-        <p>© <span id="year"></span> La hora de la Luz. Todos los derechos reservados.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="main.js"></script>
+  <section class="section alt" id="donar">
+    <div class="container donate-grid">
+      <div>
+        <h2>Haz tu donación hoy</h2>
+        <p class="section-intro">
+          Tu generosidad permite que la luz de Jesús llegue a lugares donde
+          la oscuridad parece tener la última palabra. Una sola ofrenda puede
+          marcar la diferencia para una familia completa.
+        </p>
+        <ul class="bullet-list">
+          <li>Apoya proyectos locales en Cuba y otros lugares.</li>
+          <li>Fortalece a obreros y familias que sirven en el campo.</li>
+          <li>Impulsa nuevas iniciativas de evangelismo y ayuda social.</li>
+        </ul>
+      </div>
+
+      <div class="donate-box">
+        <h3>Donación única o especial</h3>
+        <p class="form-note">
+          Muy pronto podrás donar directamente desde esta página. Mientras tanto,
+          completa el formulario para que podamos contactarte con las opciones
+          de donación más seguras.
+        </p>
+        <form
+          class="donate-form"
+          name="donar-unica"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="donar-unica" />
+
+          <label for="donation-type">Destino de la donación</label>
+          <select id="donation-type" name="destino">
+            <option value="general">La hora de la Luz (general)</option>
+            <option value="gocuba">GoCuba</option>
+            <option value="cada-hogar">Cada Hogar / EveryHome</option>
+          </select>
+
+          <label for="amount">Monto (USD)</label>
+          <input id="amount" name="monto" type="number" min="5" step="1" required />
+
+          <label for="name">Nombre</label>
+          <input id="name" name="nombre" type="text" required />
+
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required />
+
+          <button type="submit" class="btn primary full">
+            Enviar mi intención de donación
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container contact-grid">
+      <div>
+        <h2>Conectemos</h2>
+        <p class="section-intro">
+          ¿Quieres saber más, recibir materiales o invitar La hora de la Luz a tu
+          iglesia u organización? Escríbenos.
+        </p>
+        <ul class="bullet-list">
+          <li>Correo: contacto@lahoradelaluz.org (ejemplo, puedes editarlo luego).</li>
+          <li>Invita a tu iglesia a ser parte de GoCuba.</li>
+          <li>Solicita recursos para evangelismo y discipulado.</li>
+          <li>Recibe noticias y testimonios por correo electrónico.</li>
+        </ul>
+      </div>
+
+      <div class="contact-box">
+        <h3>Déjanos tus datos</h3>
+        <form
+          class="contact-form"
+          name="contacto-general"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contacto-general" />
+          <label for="contact-name">Nombre</label>
+          <input id="contact-name" name="nombre" type="text" required />
+          <label for="contact-email">Correo</label>
+          <input id="contact-email" name="email" type="email" required />
+          <label for="contact-message">Mensaje</label>
+          <textarea id="contact-message" name="mensaje" rows="4" required></textarea>
+          <button type="submit" class="btn secondary full">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section newsletter">
+    <div class="container newsletter-grid">
+      <div>
+        <h2>Mantente al tanto</h2>
+        <p class="section-intro">
+          Suscríbete para recibir noticias, historias y fechas de eventos de
+          La hora de la Luz, GoCuba y EveryHome.
+        </p>
+      </div>
+      <form
+        class="newsletter-form"
+        name="boletin-hora-de-la-luz"
+        method="POST"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="boletin-hora-de-la-luz" />
+        <input type="email" name="email" placeholder="tu@email.com" required />
+        <button type="submit" class="btn primary">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="img/everyhome-logo.png" alt="EveryHome" />
+        <span>La hora de la Luz</span>
+      </div>
+      <p class="footer-text">
+        Juntos podemos llevar la luz de Jesús a cada hogar.
+      </p>
+    </div>
+    <div class="footer-links">
+      <a href="gocuba.html">GoCuba</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      <p>© <span id="year"></span> La hora de la Luz. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>

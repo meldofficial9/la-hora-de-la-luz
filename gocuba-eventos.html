@@ -8,73 +8,72 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body data-page="gocuba-eventos">
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand">
-        <div class="brand-logos">
-          <img src="img/lighthouse-logo.png" alt="La hora de la Luz Faro" class="brand-logo small-logo" />
-          <img src="img/everyhome-logo.png" alt="EveryHome Logo" class="brand-logo" />
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">La hora de la Luz</span>
-          <span class="brand-subtitle">Llevando esperanza a cada hogar</span>
-        </div>
-      </a>
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logos">
+        <img src="img/lighthouse-logo.png" alt="La hora de la Luz Faro" class="brand-logo small-logo" />
+        <img src="img/everyhome-logo.png" alt="EveryHome Logo" class="brand-logo" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">La hora de la Luz</span>
+        <span class="brand-subtitle">Llevando esperanza a cada hogar</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="gocuba.html">GoCuba</a>
+      <a href="eventos.html" class="">Eventos</a>
+      <a href="testimonios.html" class="">Testimonios</a>
+      <a href="noticias.html" class="">Noticias</a>
+      <a href="recursos.html" class="">Recursos</a>
+      <a href="index.html#cada-hogar">Cada Hogar</a>
+      <a href="index.html#donar">Donar</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-      <button class="nav-toggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-menu">
-        <a href="index.html#inicio">Inicio</a>
-        <a href="gocuba.html">GoCuba</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="testimonios.html">Testimonios</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="index.html#cada-hogar">Cada Hogar</a>
-        <a href="index.html#donar">Donar</a>
-        <a href="index.html#contacto">Contacto</a>
-      </nav>
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>Eventos GoCuba</h1>
+      <p class="section-intro">
+        Encuentros, campañas y jornadas específicas del movimiento GoCuba.
+      </p>
+      <div id="gocuba-eventos-list" class="card-grid dynamic-grid"></div>
     </div>
-  </header>
+  </section>
+</main>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1>Eventos GoCuba</h1>
-        <p class="section-intro">
-          Encuentros, campañas y jornadas específicas del movimiento GoCuba.
-        </p>
-        <div id="gocuba-eventos-list" class="card-grid dynamic-grid"></div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="img/everyhome-logo.png" alt="EveryHome" />
+        <span>La hora de la Luz</span>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="img/everyhome-logo.png" alt="EveryHome" />
-          <span>La hora de la Luz</span>
-        </div>
-        <p class="footer-text">
-          Juntos podemos llevar la luz de Jesús a cada hogar.
-        </p>
-      </div>
-      <div class="footer-links">
-        <a href="gocuba.html">GoCuba</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="testimonios.html">Testimonios</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="recursos.html">Recursos</a>
-      </div>
-      <div class="footer-meta">
-        <p>© <span id="year"></span> La hora de la Luz. Todos los derechos reservados.</p>
-      </div>
+      <p class="footer-text">
+        Juntos podemos llevar la luz de Jesús a cada hogar.
+      </p>
     </div>
-  </footer>
+    <div class="footer-links">
+      <a href="gocuba.html">GoCuba</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <div class="footer-meta">
+      <p>© <span id="year"></span> La hora de la Luz. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
 
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

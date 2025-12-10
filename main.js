@@ -1,4 +1,4 @@
-// Navbar toggle
+// Navbar toggle & identity & dynamic content
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
@@ -10,9 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Year in footer
   const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
   // Netlify Identity redirect to /panel after login
   if (window.netlifyIdentity) {
@@ -25,18 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dynamic content loader
   const page = document.body.getAttribute("data-page");
   if (!page) return;
 
   if (page === "gocuba") {
-    // special: load stories and news for GoCuba
     loadList("content/testimonios-gocuba.json", "gocuba-stories", "testimonial", 3);
     loadList("content/noticias-gocuba.json", "gocuba-news", "news", 3);
     return;
   }
 
   const map = {
+    "home": { file: "content/testimonios.json", containerId: "home-testimonios", type: "testimonial", limit: 3 },
     "eventos": { file: "content/eventos.json", containerId: "eventos-list", type: "event" },
     "testimonios": { file: "content/testimonios.json", containerId: "testimonios-list", type: "testimonial" },
     "noticias": { file: "content/noticias.json", containerId: "noticias-list", type: "news" },
@@ -44,13 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "recursos": { file: "content/recursos.json", containerId: "recursos-list", type: "resource" },
     "gocuba-eventos": { file: "content/eventos-gocuba.json", containerId: "gocuba-eventos-list", type: "event" },
     "gocuba-testimonios": { file: "content/testimonios-gocuba.json", containerId: "gocuba-testimonios-list", type: "testimonial" },
-    "gocuba-noticias": { file: "content/noticias-gocuba.json", containerId: "gocuba-noticias-list", type: "news" },
-    "home": { file: "content/testimonios.json", containerId: "home-testimonios", type: "testimonial", limit: 3 }
+    "gocuba-noticias": { file: "content/noticias-gocuba.json", containerId: "gocuba-noticias-list", type: "news" }
   };
 
   const cfg = map[page];
-  if (!cfg || !cfg.file || !cfg.containerId) return;
-
+  if (!cfg) return;
   loadList(cfg.file, cfg.containerId, cfg.type, cfg.limit);
 });
 
@@ -69,46 +64,36 @@ function loadList(file, containerId, type, limit) {
         return;
       }
 
-      const fragments = slice.map((item) => {
-        if (type === "event") {
-          return renderEvent(item);
-        } else if (type === "testimonial") {
-          return renderTestimonial(item);
-        } else if (type === "news") {
-          return renderNews(item);
-        } else if (type === "reflection") {
-          return renderReflection(item);
-        } else if (type === "resource") {
-          return renderResource(item);
-        }
-        return "";
-      });
+      const html = slice
+        .map((item) => {
+          if (type === "event") return renderEvent(item);
+          if (type === "testimonial") return renderTestimonial(item);
+          if (type === "news") return renderNews(item);
+          if (type === "reflection") return renderReflection(item);
+          if (type === "resource") return renderResource(item);
+          return "";
+        })
+        .join("");
 
-      container.innerHTML = fragments.join("");
+      container.innerHTML = html;
     })
     .catch((err) => {
-      console.error("Error cargando contenido dinámico:", err);
-      container.innerHTML =
-        "<p class='section-intro'>No fue posible cargar el contenido en este momento.</p>";
+      console.error("Error cargando contenido:", err);
+      container.innerHTML = "<p class='section-intro'>No fue posible cargar el contenido en este momento.</p>";
     });
 }
 
-function esc(value) {
-  if (value == null) return "";
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+function esc(v) {
+  if (v == null) return "";
+  return String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-// Render helpers
 function renderEvent(item) {
   const titulo = esc(item.titulo);
   const fecha = esc(item.fecha);
   const lugar = esc(item.lugar);
   const descripcion = esc(item.descripcion);
   const tag = esc(item.tag);
-
   return `
     <article class="card">
       ${tag ? `<div class="card-tag">${tag}</div>` : ""}
