@@ -119,7 +119,17 @@
       <p class="section-intro">
         Cada historia representa un hogar alcanzado, una vida transformada.
       </p>
-      <div id="home-testimonios" class="stories-grid"></div>
+      <div class="stories-grid">
+        <article class="story">
+          <h3>Una familia transformada</h3>
+          <p class="card-meta">Cuba</p>
+          <p><strong>Una visita que cambió todo</strong></p>
+          <p>
+            Durante La hora de la Luz, una visita casa por casa abrió la puerta para reconciliación
+            y esperanza en esta familia.
+          </p>
+        </article>
+      </div>
       <div class="cta-center">
         <a href="testimonios.html" class="btn secondary">Ver más testimonios</a>
       </div>
@@ -175,46 +185,6 @@
           Como suscriptor Cada Hogar recibirás noticias, testimonios y reportes del impacto
           que estás generando, además de fechas clave de oración y movilización.
         </p>
-      </div>
-
-      <div class="cada-hogar-grid">
-        <form
-          class="contact-form cada-hogar-form"
-          name="cada-hogar-suscripcion"
-          method="POST"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="cada-hogar-suscripcion" />
-
-          <label for="ch-name">Nombre completo</label>
-          <input id="ch-name" name="nombre" type="text" required />
-
-          <label for="ch-email">Correo electrónico</label>
-          <input id="ch-email" name="email" type="email" required />
-
-          <label for="ch-amount">Monto mensual (USD)</label>
-          <input id="ch-amount" name="monto" type="number" min="5" step="1" required />
-
-          <label for="ch-message">¿Por qué quieres ser parte de Cada Hogar? (opcional)</label>
-          <textarea id="ch-message" name="mensaje" rows="3"></textarea>
-
-          <label class="checkbox-inline">
-            <input type="checkbox" name="boletin" value="si" checked />
-            Quiero recibir noticias y fechas de eventos.
-          </label>
-
-          <button type="submit" class="btn primary full">
-            Quiero ser parte de Cada Hogar
-          </button>
-        </form>
-
-        <div class="cada-hogar-note">
-          <p>
-            Esta información nos ayuda a conocerte y a acompañarte mejor. Una vez que envíes
-            el formulario, recibirás un correo con las opciones seguras para configurar tu
-            donación recurrente.
-          </p>
-        </div>
       </div>
     </div>
   </section>

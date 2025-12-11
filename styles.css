@@ -26,6 +26,15 @@ body {
   color: var(--text-main);
   line-height: 1.6;
 }
+
+/* GoCuba fondo más rojo */
+body[data-page="gocuba"] {
+  background: radial-gradient(circle at top, #4a0810, #050108);
+}
+.hero-gocuba {
+  background: radial-gradient(circle at top, #6a101a, #220308);
+}
+
 .container { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
 .section { padding: 4.5rem 0; }
 .section.alt { background: linear-gradient(145deg, var(--bg-alt), #020f0e); }
@@ -71,7 +80,6 @@ body {
 
 /* Hero */
 .hero { padding: 4rem 0 4.5rem; }
-.hero-gocuba { background: radial-gradient(circle at top, #10423a, #020909); }
 .hero-grid {
   display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
   gap:2.5rem; align-items:center;
@@ -189,6 +197,14 @@ body {
   font-size:3rem; opacity:.08; top:.6rem; right:1rem;
 }
 
+/* Split grid */
+.split-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1.1fr);
+  gap:2rem;
+  align-items:flex-start;
+}
+
 /* Newsletter */
 .newsletter {
   padding-top:2rem; padding-bottom:3.5rem;
@@ -230,9 +246,135 @@ body {
 .footer-links a:hover { color:var(--accent-strong); }
 .footer-meta { grid-column:1 / -1; font-size:.75rem; color:var(--text-muted); text-align:center; }
 
+/* Layout helpers */
+.section-header-flex {
+  display:flex;
+  justify-content:space-between;
+  gap:1.5rem;
+  align-items:flex-start;
+  margin-bottom:2rem;
+}
+.badge {
+  align-self:flex-start;
+  padding:.4rem 1rem;
+  border-radius:var(--radius-pill);
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(0,0,0,0.25);
+  font-size:.8rem;
+  color:var(--accent-strong);
+}
+.plan-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;
+  margin-bottom:2rem;
+}
+.plan-card {
+  background:var(--accent-soft);
+  border-radius:var(--radius-xl);
+  padding:1.8rem 1.6rem;
+  border:1px solid var(--border-subtle);
+}
+.plan-featured {
+  border-color:var(--accent-strong);
+  box-shadow:var(--shadow-soft);
+}
+.plan-amount { margin:.5rem 0; font-weight:700; color:var(--accent-strong); }
+.plan-text { margin:0; color:var(--text-muted); }
+
+.bullet-list {
+  list-style:none;
+  padding:0; margin:1.5rem 0 0;
+}
+.bullet-list li {
+  position:relative;
+  padding-left:1.5rem;
+  margin-bottom:.5rem;
+  color:var(--text-muted);
+}
+.bullet-list li::before {
+  content:"•";
+  position:absolute;
+  left:.3rem;
+  color:var(--accent-strong);
+}
+
+/* Forms */
+.donate-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+  gap:2.2rem;
+  align-items:flex-start;
+}
+.donate-box {
+  background:rgba(0,0,0,0.45);
+  border-radius:var(--radius-xl);
+  padding:1.8rem 1.6rem;
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:var(--shadow-soft);
+}
+.donate-form,
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+}
+.donate-form label,
+.contact-form label { font-size:.9rem; }
+.donate-form input,
+.donate-form select,
+.contact-form input,
+.contact-form textarea {
+  border-radius:.7rem;
+  border:1px solid rgba(255,255,255,0.18);
+  padding:.55rem .75rem;
+  background:rgba(4,15,15,0.85);
+  color:var(--text-main);
+  font-size:.9rem;
+  outline:none;
+}
+.form-note { font-size:.8rem; color:var(--text-muted); }
+
+/* Contact */
+.contact-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:2rem;
+}
+.contact-box {
+  background:rgba(0,0,0,0.42);
+  border-radius:var(--radius-xl);
+  padding:1.8rem 1.6rem;
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+/* Timeline */
+.timeline {
+  border-left:2px solid rgba(255,255,255,0.18);
+  margin-top:1.5rem;
+  padding-left:1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.3rem;
+}
+.timeline-item { position:relative; }
+.timeline-dot {
+  position:absolute;
+  left:-1.05rem; top:.35rem;
+  width:.75rem; height:.75rem;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--accent-strong), var(--accent-blue));
+  box-shadow:0 0 0 3px rgba(255,202,95,0.25);
+}
+
 /* Responsive */
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:minmax(0,1fr);}
+  .hero-grid,
+  .donate-grid,
+  .contact-grid,
+  .split-grid {
+    grid-template-columns:minmax(0,1fr);
+  }
   .footer-grid{grid-template-columns:minmax(0,1fr); text-align:left;}
   .footer-links{justify-content:flex-start;}
 }
